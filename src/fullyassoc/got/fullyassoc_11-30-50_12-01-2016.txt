@@ -1,5 +1,0 @@
-write-ack 0 miss 5
-read-ack 0 hit 2 11
-read-ack 0 hit 2 00
-read-ack 0 hit 2 71
-read-ack 0 hit 2 FE
