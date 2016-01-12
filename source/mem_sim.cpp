@@ -1,6 +1,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <map>
 using namespace std;
 
 int main(int argc, const char * argv[]){
@@ -20,6 +21,7 @@ int main(int argc, const char * argv[]){
 	unsigned readTime	= stoi(argv[7]);
 	unsigned writeTime	= stoi(argv[8]);
 	string input;
+	map <long, int> cacheData;
 	while(getline(cin, input)) {
 		string buffer;
 		unsigned address;
@@ -33,13 +35,16 @@ int main(int argc, const char * argv[]){
 		} else if (buffer == "read-req") { 
 			cout << "READ" << endl;
 			sstr >> address;
-			cout << address << endl;
+			if (cacheData.count(address) == 1) {
+				cout << hex << cacheData.find(address)->second << endl;
+			} else {
+				cout << 0 << endl;
+			}
+			
         } else if (buffer == "write-req") {
         	cout << "WRITE" << endl;
         	sstr >> address >> hex >> data;
-        	cout << address << endl;
-        	data++;
-        	cout << hex << data << dec << endl;
+        	cacheData[address] = data;
         } 
         else { 
         	cout << "NOTHING" << endl;

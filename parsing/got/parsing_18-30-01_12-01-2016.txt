@@ -1,0 +1,6 @@
+WRITE
+READ
+fffe
+READ
+0
+NOTHING
