@@ -1,7 +1,7 @@
 #!/bin/bash
 
 FILETYPE=txt
-DIRECTORY=directmapped
+DIRECTORY=fullyassoc
 
 INPUTFILENAME=input.txt
 OUTPUTFILENAME=output.txt
@@ -14,8 +14,11 @@ TIME=$(date "+%H-%M-%S_%d-%m-%Y")
 
 GOT=${DIRECTORY}/got/${DIRECTORY}_${TIME}.${FILETYPE}
 touch ${GOT}
-clear
+
 killall -9 FileMerge
+clear
+clear
+
 if [ -f memsim ] 
 	then
 		rm memsim
@@ -38,6 +41,7 @@ then
 	if [ -f ${PARAMS} ] 
 	then
 			cat ${INPUT}  |  ./memsim ${PARAMSCONTENTS}  >  ${GOT}
+			echo ${GOT}
 	else 
 		echo "NO PROGRAM COMPILATION"
 		rm ${GOT}

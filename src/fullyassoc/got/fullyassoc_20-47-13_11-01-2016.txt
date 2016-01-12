@@ -1,0 +1,12 @@
+write-ack 0 miss 5
+write-ack 0 hit 2
+write-ack 0 miss 5
+write-ack 0 miss 5
+write-ack 0 miss 5
+write-ack 0 miss 5
+write-ack 0 miss 5
+write-ack 0 miss 5
+write-ack 0 hit 2
+read-ack 0 hit 2 77777777
+write-ack 0 miss 5
+write-ack 0 miss F

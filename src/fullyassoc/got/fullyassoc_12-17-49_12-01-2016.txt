@@ -1,0 +1,18 @@
+write-ack 0 miss 5
+write-ack 0 hit 2
+write-ack 0 miss 5
+flush-ack 20
+read-ack 0 hit 2 33333333
+write-ack 0 miss 5
+write-ack 0 miss 5
+write-ack 0 miss 5
+write-ack 0 miss 5
+write-ack 0 miss 5
+write-ack 0 miss 5
+write-ack 0 hit 2
+read-ack 0 hit 2 77777777
+write-ack 0 miss 5
+write-ack 0 miss F
+read-ack 0 miss F 44444444
+read-ack 0 miss F 55555555
+read-ack 0 hit 2 88888888

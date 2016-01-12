@@ -1,0 +1,3 @@
+write-ack 0 miss 5
+read-ack 0 hit 2 F8
+write-ack 0 miss 5

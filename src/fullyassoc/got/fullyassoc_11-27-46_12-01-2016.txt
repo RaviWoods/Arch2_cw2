@@ -1,0 +1,3 @@
+write-ack 0 miss 5
+read-ack 0 hit 2 11111111
+write-ack 0 miss 5
