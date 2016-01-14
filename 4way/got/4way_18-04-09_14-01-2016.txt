@@ -1,0 +1,57 @@
+NOTHING
+NOTHING
+NOTHING
+WRITE
+setIndex = 1
+hit = 0
+currentbAddress = 25
+accessTime = 4
+WRITE
+setIndex = 1
+hit = 1
+accessTime = 1
+WRITE
+setIndex = 1
+hit = 1
+accessTime = 1
+WRITE
+setIndex = 1
+hit = 1
+accessTime = 1
+WRITE
+setIndex = 0
+hit = 0
+currentbAddress = 20
+accessTime = 4
+WRITE
+setIndex = 2
+hit = 0
+currentbAddress = 10
+accessTime = 4
+WRITE
+setIndex = 3
+hit = 0
+currentbAddress = 19
+accessTime = 4
+WRITE
+setIndex = 0
+hit = 0
+currentbAddress = 48
+accessTime = 4
+READ
+address = 352
+WRITE
+setIndex = 0
+hit = 0
+currentbAddress = 4
+accessTime = 4
+READ
+address = 81
+WRITE
+setIndex = 0
+hit = 0
+currentbAddress = 12
+accessTime = 4
+READ
+address = 193
+FLUSH

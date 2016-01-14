@@ -1,0 +1,23 @@
+NOTHING
+NOTHING
+NOTHING
+WRITE
+accessTime = 3
+READ
+accessTime = 3
+WRITE
+accessTime = 3
+WRITE
+accessTime = 3
+READ
+accessTime = 3
+READ
+accessTime = 3
+READ
+accessTime = 3
+WRITE
+accessTime = 3
+READ
+accessTime = 3
+READ
+accessTime = 3

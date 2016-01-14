@@ -1,7 +1,7 @@
 #!/bin/bash
 
 FILETYPE=txt
-TESTDIRECTORY=fullyassoc
+TESTDIRECTORY=4way
 SRCDIRECTORY=source
 INPUTFILENAME=input.txt
 OUTPUTFILENAME=output.txt
@@ -14,10 +14,6 @@ TIME=$(date "+%H-%M-%S_%d-%m-%Y")
 
 GOT=${TESTDIRECTORY}/got/${TESTDIRECTORY}_${TIME}.${FILETYPE}
 touch ${GOT}
-
-killall -9 FileMerge
-clear
-clear
 
 if [ -f memsim ] 
 	then
@@ -37,10 +33,10 @@ fi
 
 if [ -f ${INPUT} ]
 then
-	g++ ${SRCDIRECTORY}/*.cpp -o memsim -std=c++11
+	g++ ${SRCDIRECTORY}/*.cpp -o ${SRCDIRECTORY}/memsim -std=c++11
 	if [ -f ${PARAMS} ] 
 	then
-			cat ${INPUT}  |  ./memsim ${PARAMSCONTENTS}  >  ${GOT}
+			cat ${INPUT}  |  ./${SRCDIRECTORY}/memsim ${PARAMSCONTENTS}  >  ${GOT}
 			echo ${GOT}
 	else 
 		echo "NO PROGRAM COMPILATION"
@@ -58,7 +54,7 @@ if [ -s ${GOT} ]
 then	
 	if [ -f ${OUTPUT} ]
 	then
-   		meld ${GOT} ${OUTPUT}
+   		sdiff --ignore-all-space ${GOT} ${OUTPUT}
 		exit 1
 	else 
 		echo "WRONG OUTPUT NAME"	

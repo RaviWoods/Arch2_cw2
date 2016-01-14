@@ -1,0 +1,11 @@
+WRITE
+"READ" = READ
+fffe
+"READ" = READ
+0
+WRITE
+WRITE
+"READ" = READ
+bbbb
+"READ" = READ
+aaaa

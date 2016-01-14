@@ -1,0 +1,11 @@
+WRITE
+READ
+fffe
+READ
+0
+WRITE
+WRITE
+READ
+bbbb
+READ
+aaaa
