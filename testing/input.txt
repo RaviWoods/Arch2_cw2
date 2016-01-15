@@ -1,7 +1,3 @@
-write-req 10 FFFE
+write-req 10 FFFEFFFEFFFEFFFE
 read-req 10
-read-req 20
-write-req 20 AAAA
-write-req 10 BBBB
-read-req 10
-read-req 20
+

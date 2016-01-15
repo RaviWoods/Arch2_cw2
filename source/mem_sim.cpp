@@ -6,7 +6,7 @@ class Parameters {
 	public:
 		Parameters(const char * parameters[]) {
 				addressLength = atoi(parameters[1]);
-				bytePerWord	= atoi(parameters[2]);
+				bytePerWord	= atoi(parameters[2] );
 				wordPerBlock	= atoi(parameters[3]);
 				blockPerSet	= atoi(parameters[4]);
 				setPerCache	= atoi(parameters[5]);
@@ -14,6 +14,7 @@ class Parameters {
 				readTime	= atoi(parameters[7]);
 				writeTime	= atoi(parameters[8]);
 		}
+
 		unsigned addressLength;
 		unsigned bytePerWord;
 		unsigned wordPerBlock;
@@ -30,6 +31,9 @@ class Block {
 		Block(unsigned bAddressIn, bool dirtyBitIn) : bAddress(bAddressIn), dirtyBit(dirtyBitIn) {};
 		unsigned bAddress;
 		bool dirtyBit;
+		friend ostream& operator<< (std::ostream & out, Block const& data) {
+    		out << "B" << data.bAddress << " dirtyBit = " << data.dirtyBit << endl;
+		}
 };
 
 string readOrWrite (map<long, int>& cacheData, vector<list<Block>>& cacheVect, const Parameters& P, unsigned address, bool write);
@@ -72,7 +76,19 @@ int main(int argc, const char * argv[]){
 		} else if (input == "debug-req") {
 			SOUT("DEBUG");
 			stringstream ss;
-			ss << "debug-ack-begin" << endl << endl << "debug-ack-end" << endl;
+			ss << "debug-ack-begin" << endl;
+			for (vector<list<Block>>::iterator v_it = cacheVect.begin() ; v_it != cacheVect.end(); ++v_it) {
+				ss << "Set " << v_it - cacheVect.begin() << ":" << endl << endl;
+				bool empty = true;
+				for(list<Block>::iterator l_it = v_it->begin(); l_it != v_it->end(); ++l_it) {
+					empty = false;
+					ss << *l_it << endl;
+				}
+				if (empty == true) {
+					ss << "EMPTY" << endl;
+				}
+			}
+			ss << "debug-ack-end" << endl;
 			outputString = ss.str();
 		} else if (buffer == "read-req") { 
 			SOUT("READ");
@@ -101,7 +117,7 @@ string readOrWrite (map<long, int>& cacheData, vector<list<Block>>& cacheVect, c
 	unsigned setIndex = currentbAddress % P.setPerCache;
 	bool hit = 0;
 	list<Block>::iterator it;
-	Block blockToWrite(currentbAddress,0);
+	Block blockToWrite(currentbAddress,write);
 	for(it = cacheVect[setIndex].begin(); it != cacheVect[setIndex].end(); ++it) {
 		if (it->bAddress == currentbAddress) {
 			hit = 1;
@@ -109,7 +125,9 @@ string readOrWrite (map<long, int>& cacheData, vector<list<Block>>& cacheVect, c
 		}
 	}
 	if (hit == 1) {
-		it->dirtyBit = 1;
+		if (it->dirtyBit == 0) {
+			it->dirtyBit = write;
+		}
 		cacheVect[setIndex].splice(cacheVect[setIndex].begin(), cacheVect[setIndex], it);
 	} else {
 		if (cacheVect[setIndex].size() == P.blockPerSet) {
@@ -124,6 +142,8 @@ string readOrWrite (map<long, int>& cacheData, vector<list<Block>>& cacheVect, c
 		cacheVect[setIndex].push_front(blockToWrite);
 	}
 	VOUT(accessTime);
+
+
 	string outputString;
 	if (write) {
 		outputString = makeWriteOutput(setIndex,hit,accessTime);
@@ -131,6 +151,7 @@ string readOrWrite (map<long, int>& cacheData, vector<list<Block>>& cacheVect, c
 		outputString = makeReadOutput(cacheData,address,P,setIndex,hit,accessTime);
 	}
 	return outputString;
+
 }	
 
 string makeReadOutput(map<long, int>& cacheData, unsigned address, const Parameters& P, int setIndex, bool hit, int accessTime) {

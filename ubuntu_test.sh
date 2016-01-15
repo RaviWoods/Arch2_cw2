@@ -1,7 +1,7 @@
 #!/bin/bash
 
 FILETYPE=txt
-TESTDIRECTORY=parsing
+TESTDIRECTORY=testing
 SRCDIRECTORY=source
 INPUTFILENAME=input.txt
 OUTPUTFILENAME=output.txt
