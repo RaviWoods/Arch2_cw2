@@ -33,10 +33,10 @@ fi
 
 if [ -f ${INPUT} ]
 then
-	g++ ${SRCDIRECTORY}/*.cpp -o ${SRCDIRECTORY}/memsim -std=c++11
+	g++ *.cpp -o /memsim -std=c++11
 	if [ -f ${PARAMS} ] 
 	then
-			cat ${INPUT}  |  ./${SRCDIRECTORY}/memsim ${PARAMSCONTENTS}  >  ${GOT}
+			cat ${INPUT}  |  ./memsim ${PARAMSCONTENTS}  >  ${GOT}
 			echo ${GOT}
 	else 
 		echo "NO PROGRAM COMPILATION"

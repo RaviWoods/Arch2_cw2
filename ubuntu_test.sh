@@ -35,7 +35,7 @@ fi
 
 if [ -f ${INPUT} ]
 then
-	g++ ${SRCDIRECTORY}/*.cpp -o memsim -std=c++11
+	g++ *.cpp -o memsim -std=c++11
 	if [ -f ${PARAMS} ] 
 	then
 			cat ${INPUT}  |  ./memsim ${PARAMSCONTENTS}  >  ${GOT}
