@@ -1,19 +1,29 @@
+WRITE MISS
 write-ack 0 miss 2
 write-ack 0 hit 2
+WRITE MISS
 write-ack 0 miss 2
 flush-ack 20
 read-ack 0 hit 2 33333333
+WRITE MISS
 write-ack 0 miss 2
+WRITE MISS
 write-ack 0 miss 2
+WRITE MISS
 write-ack 0 miss 2
+WRITE MISS
 write-ack 0 miss 2
+WRITE MISS
 write-ack 0 miss 2
+WRITE MISS
 write-ack 0 miss 2
 write-ack 0 hit 2
 read-ack 0 hit 2 77777777
+WRITE MISS
 write-ack 0 miss 2
+WRITE MISS
 write-ack 0 miss 12
 read-ack 0 miss 15 44444444
 read-ack 0 miss 15 55555555
-read-ack 0 hit 2 88888888	
+read-ack 0 hit 2 88888888
 flush-ack 60

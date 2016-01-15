@@ -137,7 +137,9 @@ string readOrWrite (map<long, int>& cacheData, vector<list<Block>>& cacheVect, c
 			}
 			cacheVect[setIndex].erase(it);
 		}
-		accessTime += P.readTime;
+		if (!(write == true && P.wordPerBlock == 1)) {
+			accessTime += P.readTime;
+		}
 		
 		cacheVect[setIndex].push_front(blockToWrite);
 	}

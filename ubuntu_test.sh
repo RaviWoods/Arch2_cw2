@@ -1,7 +1,7 @@
 #!/bin/bash
 
 FILETYPE=txt
-TESTDIRECTORY=testing
+TESTDIRECTORY=fullyassoc
 SRCDIRECTORY=source
 INPUTFILENAME=input.txt
 OUTPUTFILENAME=output.txt
