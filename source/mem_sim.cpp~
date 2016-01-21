@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main(int argc, const char * argv[]){
+
+/*	
+#ifdef DEBUG		// pipe input file to stdin
+	std::ifstream arq(getenv("SAMPLE_INPUT"));
+	std::cin.rdbuf(arq.rdbuf());
+#endif
+*/
+	unsigned alen, bpw, wpb, bps, spc, time_hit, time_write, time_read;
+	
+	if( argc < 8 ){
+		cout << "Less than 8 inputs." << endl;
+		exit( EXIT_FAILURE );
+	}
+	
+	addressLength = atoi(argv[1]);
+	bytePerWord	= atoi(argv[2]);
+	wordPerBlock	= atoi(argv[3]);
+	blockPerSet	= atoi(argv[4]);
+	setPerCache	= atoi(argv[5]);
+	hitTime 	= atoi(argv[6]);
+	readTime	= atoi(argv[7]);
+	writeTime	= atoi(argv[8]);
+}
