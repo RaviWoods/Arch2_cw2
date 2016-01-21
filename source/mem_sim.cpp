@@ -36,7 +36,8 @@ class Block {
 		}
 };
 
-string makeReadOutput(map<long, vector<uint8_t>>& cacheData, unsigned address, const Parameters& P, int setIndex, bool hit, int accessTime);
+string readOrWrite (map<long, int>& cacheData, vector<list<Block>>& cacheVect, const Parameters& P, unsigned address, bool write);
+string makeReadOutput(map<long, int>& cacheData, unsigned address, const Parameters& P, int setIndex, bool hit, int accessTime);
 string makeWriteOutput(int setIndex, bool hit, int accessTime);
 
 int main(int argc, const char * argv[]){
@@ -47,8 +48,7 @@ int main(int argc, const char * argv[]){
 	
 	Parameters P = Parameters(argv);
 	string input;
-	
-	map <long, vector<uint8_t> cacheData;
+	map <long, int> cacheData;
 	vector<list<Block>> cacheVect(P.setPerCache);
 	
 	while(getline(cin, input)) {
@@ -97,12 +97,7 @@ int main(int argc, const char * argv[]){
         } else if (buffer == "write-req") {
         	SOUT("WRITE");
         	sstr >> address >> hex >> data;
-		vector<uint8_t> dataVect;
-		for(int i; i <= bytePerWord; i++) {
-			dataVect.push_back(data%8);
-			data/8;
-		}
-        	cacheData[address] = dataVect;
+        	cacheData[address] = data;
         	outputString = readOrWrite(cacheData,cacheVect,P,address,1);
         } 
         else { 
@@ -113,7 +108,7 @@ int main(int argc, const char * argv[]){
 
 }
 
-string readOrWrite (map<long, dataVect>& cacheData, vector<list<Block>>& cacheVect, const Parameters& P, unsigned address, bool write) {
+string readOrWrite (map<long, int>& cacheData, vector<list<Block>>& cacheVect, const Parameters& P, unsigned address, bool write) {
 	int accessTime = 0;
 
 	accessTime += P.hitTime;
@@ -161,7 +156,7 @@ string readOrWrite (map<long, dataVect>& cacheData, vector<list<Block>>& cacheVe
 
 }	
 
-string makeReadOutput(map<long, dataVect>& cacheData, unsigned address, const Parameters& P, int setIndex, bool hit, int accessTime) {
+string makeReadOutput(map<long, int>& cacheData, unsigned address, const Parameters& P, int setIndex, bool hit, int accessTime) {
 	string hitString;
 	stringstream ss;
 	unsigned data;
@@ -170,19 +165,12 @@ string makeReadOutput(map<long, dataVect>& cacheData, unsigned address, const Pa
 	} else {
 		hitString = "miss";
 	}
-
-	ss << "read-ack " << setIndex << " " << hitString << " " << accessTime << " ";
-		
-	/*	
 	if (cacheData.count(address) == 1) {
+		data = cacheData.find(address)->second;
 	} else {
-		cout << uppercase << setfill('0') << setw(2*P.bytePerWord) << hex << data << endl;
+		data = 0;
 	}
-	*/
-	for(int i = P.bytePerWord; i >= 0; i--) {
-		ss << cacheData[address][i];
-	}
-	
+	ss << "read-ack " << setIndex << " " << hitString << " " << accessTime << " " << uppercase << setfill('0') << setw(2*P.bytePerWord) << hex << data << endl;
 	return ss.str();
 }
 
