@@ -1,7 +1,7 @@
 #!/bin/bash
 
 FILETYPE=txt
-TESTDIRECTORY=fullyassoc
+TESTDIRECTORY=4way
 SRCDIRECTORY=source
 INPUTFILENAME=input.txt
 OUTPUTFILENAME=output.txt
