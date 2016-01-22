@@ -1,0 +1,13 @@
+write-ack 0 miss 1
+write-ack 1 miss 1
+write-ack 1 miss 1
+read-ack 1 miss 3 0000
+write-ack 0 miss 1
+read-ack 1 miss 3 0000
+write-ack 1 miss 4 
+read-ack 0 miss 3 0000
+write-ack 0 miss 1
+read-ack 0 miss 6 0000
+write-ack 0 miss 4 
+flush-ack 12
+write-ack 1 miss 1

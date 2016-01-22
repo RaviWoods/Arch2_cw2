@@ -1,0 +1,14 @@
+write-ack 1 miss 4
+write-ack 1 hit 1
+write-ack 1 hit 1
+write-ack 1 hit 1
+write-ack 0 miss 4
+write-ack 2 miss 4
+write-ack 3 miss 4
+write-ack 0 miss 4
+read-ack 0 miss 4 00
+write-ack 0 miss 4
+read-ack 0 hit 1 00
+write-ack 0 miss 14
+read-ack 0 miss 4 08
+flush-ack 60

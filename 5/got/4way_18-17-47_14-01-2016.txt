@@ -1,0 +1,31 @@
+NOTHING
+NOTHING
+NOTHING
+WRITE
+accessTime = 4
+WRITE
+accessTime = 1
+WRITE
+accessTime = 1
+WRITE
+accessTime = 1
+WRITE
+accessTime = 4
+WRITE
+accessTime = 4
+WRITE
+accessTime = 4
+WRITE
+accessTime = 4
+READ
+accessTime = 4
+WRITE
+accessTime = 4
+READ
+accessTime = 1
+WRITE
+accessTime = 14
+READ
+accessTime = 4
+FLUSH
+accessTime = 60

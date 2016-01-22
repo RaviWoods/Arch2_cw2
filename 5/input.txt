@@ -1,0 +1,15 @@
+# 8 bit address
+# 4 bytes/word, 2 words/block, 4 blocks/set, 1 set/cache
+# 1 cycle/hit, 2 cycles/read, 4 cycles/write
+write-req 0 1234AA3F
+write-req 12 AF321152
+write-req 16 11534242
+read-req 12
+read-req 4
+write-req 36 F2421ADD
+write-req 40 AFF33322
+read-req 28 
+read-req 0 
+read-req 40
+read-req 36
+write-req 20 AFF32231

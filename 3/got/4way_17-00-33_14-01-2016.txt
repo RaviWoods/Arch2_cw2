@@ -1,0 +1,14 @@
+NOTHING
+NOTHING
+NOTHING
+WRITE
+hitTime = 4
+WRITE
+hitTime = 4
+WRITE
+hitTime = 4
+WRITE
+hitTime = 4
+WRITE
+hitTime = 7
+WRITE

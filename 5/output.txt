@@ -1,0 +1,12 @@
+write-ack 0 miss 3
+write-ack 0 miss 3
+write-ack 0 miss 3 
+read-ack 0 hit 1 AF321152
+read-ack 0 hit 1 00000000
+write-ack 0 miss 3
+write-ack 0 miss 7
+read-ack 0 miss 7 00000000 
+read-ack 0 hit 1 1234AA3F
+read-ack 0 hit 1 AFF33322
+read-ack 0 hit 1 F2421ADD
+write-ack 0 miss 3

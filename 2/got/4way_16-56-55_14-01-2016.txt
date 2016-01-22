@@ -1,0 +1,31 @@
+NOTHING
+NOTHING
+NOTHING
+WRITE
+address = 100
+data = 17
+setIndex = 1
+hitTime = 4
+WRITE
+address = 101
+data = 34
+setIndex = 1
+hitTime = 4
+WRITE
+address = 102
+data = 51
+setIndex = 1
+hitTime = 4
+WRITE
+address = 103
+data = 68
+setIndex = 1
+hitTime = 4
+WRITE
+address = 80
+data = 85
+setIndex = 0
+hitTime = 7
+WRITE
+address = 40
+data = 102

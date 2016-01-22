@@ -1,0 +1,55 @@
+write-ack 1 miss 4
+write-ack 1 hit 1
+write-ack 1 hit 1
+write-ack 1 hit 1
+write-ack 0 miss 4
+write-ack 2 miss 4
+write-ack 3 miss 4
+write-ack 0 miss 4
+read-ack 0 miss 4 00
+write-ack 0 miss 4
+read-ack 0 hit 1 00
+write-ack 0 miss 14
+read-ack 0 miss 4 88
+debug-ack-begin
+0
+dirty | valid | tag | data      
+1     | 1     | 4   | 99 00 00 00 
+dirty | valid | tag | data      
+0     | 1     | 30   | 00 88 00 00 
+dirty | valid | tag | data      
+1     | 1     | c   | AA 00 00 00 
+dirty | valid | tag | data      
+1     | 1     | 14   | 55 00 00 00 
+
+1
+dirty | valid | tag | data      
+0     | 0     | 0   | 0 0 0 0 
+dirty | valid | tag | data      
+0     | 0     | 0   | 0 0 0 0 
+dirty | valid | tag | data      
+0     | 0     | 0   | 0 0 0 0 
+dirty | valid | tag | data      
+1     | 1     | 19   | 11 22 33 44 
+
+2
+dirty | valid | tag | data      
+0     | 0     | 0   | 0 0 0 0 
+dirty | valid | tag | data      
+0     | 0     | 0   | 0 0 0 0 
+dirty | valid | tag | data      
+0     | 0     | 0   | 0 0 0 0 
+dirty | valid | tag | data      
+1     | 1     | a   | 66 00 00 00 
+
+3
+dirty | valid | tag | data      
+0     | 0     | 0   | 0 0 0 0 
+dirty | valid | tag | data      
+0     | 0     | 0   | 0 0 0 0 
+dirty | valid | tag | data      
+0     | 0     | 0   | 0 0 0 0 
+dirty | valid | tag | data      
+1     | 1     | 13   | 00 00 77 00 
+
+debug-ack-end

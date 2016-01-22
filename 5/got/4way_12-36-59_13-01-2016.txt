@@ -1,0 +1,4 @@
+write-ack 1 miss 5
+write-ack 1 hit 1
+write-ack 1 hit 1
+write-ack 1 hit 1

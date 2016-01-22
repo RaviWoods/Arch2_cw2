@@ -1,0 +1,14 @@
+NOTHING
+NOTHING
+NOTHING
+WRITE
+accessTime = 4
+WRITE
+accessTime = 1
+WRITE
+accessTime = 1
+WRITE
+accessTime = 1
+WRITE
+accessTime = 4
+WRITE

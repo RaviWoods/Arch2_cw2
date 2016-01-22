@@ -1,7 +1,7 @@
 # 16 bit addresses
 # 1 Bytes/word, 4 words/block, 4 blocks/set, 4 sets/cache
 # 1 cycle/hit, 3 cycles/read, 10 cycles/write
-write-req 100 11
+write-req 100100100100666610010010010066661001001001006666 11
 write-req 101 22
 write-req 102 33
 write-req 103 44
@@ -14,4 +14,5 @@ write-req 16 99
 read-req 81
 write-req 48 AA
 read-req 193
+debug-req
 flush-req

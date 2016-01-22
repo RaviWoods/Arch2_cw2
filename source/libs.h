@@ -10,20 +10,19 @@
 #include <sstream>
 #include <fstream>
 #include <cstdlib>
-#include <algorithm>
 #include <map>
 #include <list>
 
 #define DEBUG 0
 
 #if DEBUG == 1
-	#define VOUT(x) std::cout << #x << " = " << x << std::endl
+	#define VOUT(x) std::cerr << #x << " = " << x << std::endl
 #else 
 	#define VOUT(x)
 #endif
 
 #if DEBUG == 1
-	#define SOUT(x) std::cout << x << std::endl
+	#define SOUT(x) std::cerr << x << std::endl
 #else 
 	#define SOUT(x)
 #endif

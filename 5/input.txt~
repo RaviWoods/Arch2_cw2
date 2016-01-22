@@ -1,0 +1,16 @@
+# 8 bit address 
+# 2 bytes/word, 1 word/block, 4 blocks/set, 2 sets/cache
+# 1 cycle/hit, 2 cycles/read, 3 cycles/write
+write-req 0 FF32
+write-req 2 14A2
+write-req 6 2314
+read-req 14
+write-req 4 2241
+read-req 10
+write-req 18 A123 
+read-req 16 
+write-req 20 B34E
+read-req 8 
+write-req 12 FFFF
+flush-req
+write-req 2 A0F2

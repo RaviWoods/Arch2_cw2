@@ -1,0 +1,10 @@
+write-ack 0 miss 3 
+write-ack 0 hit 1 
+write-ack 1 miss 3 
+read-ack 0 hit 1 FF43
+read-ack 1 hit 1 1234
+write-ack 0 hit 1
+read-ack 0 miss 3 0000
+write-ack 0 hit 1 
+read-ack 1 hit 1 0000 
+flush-ack 6

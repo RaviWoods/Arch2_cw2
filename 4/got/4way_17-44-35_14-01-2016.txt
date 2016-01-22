@@ -1,0 +1,38 @@
+NOTHING
+NOTHING
+NOTHING
+4
+WRITE
+setIndex = 1
+HELLO
+hit = 0
+currentbAddress = 25
+accessTime = 4
+4
+WRITE
+setIndex = 1
+HELLO
+hit = 1
+accessTime = 1
+4
+WRITE
+setIndex = 1
+HELLO
+hit = 1
+accessTime = 1
+4
+WRITE
+setIndex = 1
+HELLO
+hit = 1
+accessTime = 1
+4
+WRITE
+setIndex = 0
+HELLO
+hit = 0
+currentbAddress = 20
+accessTime = 4
+4
+WRITE
+setIndex = 2

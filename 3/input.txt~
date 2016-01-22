@@ -1,0 +1,14 @@
+# 8 bit address 
+# 2 bytes/word, 4 words/block, 1 block/set, 4 sets/cache
+# 1 cycle/hit, 2 cycles/read, 2 cycles/write
+flush-req 
+write-req 32 1123
+write-req 0 FF34
+write-req 18 3452
+read-req 36 
+read-req 16 
+write-req 22 4523
+read-req 18
+flush-req 
+write-req 24 3342
+read-req 6 
