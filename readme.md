@@ -48,12 +48,15 @@ The structure of the submission directory is as follows
 | 	+-input.txt
 | 	+-output.txt
 | 	+-params.txt
+| 	+-got # directory to store time-stamped output files
 | +-directmapped # test files for direct-mapped cache (produced by Dr.Thomas)
 | 	+-input.txt
 | 	+-output.txt
 | 	+-params.txt
+| 	+-got # directory to store time-stamped output files
 | +-fullyassoc # test files for fully associative cache
 | 	+-input.txt
 | 	+-output.txt
 | 	+-params.txt
+| 	+-got # directory to store time-stamped output files
 ```

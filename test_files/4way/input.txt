@@ -14,5 +14,4 @@ write-req 16 99
 read-req 81
 write-req 48 AA
 read-req 193
-debug-req
 flush-req
