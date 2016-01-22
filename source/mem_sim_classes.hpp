@@ -1,3 +1,6 @@
+/*  RAVI WOODS - CACHE SIMULATOR - EE2-13 CWORK 2 - 22/01/2016 */
+/*  Defines classes used in the project, as well as useful typedefs on those classes */
+
 #ifndef MYCLASSES_HPP
 #define MYCLASSES_HPP
 

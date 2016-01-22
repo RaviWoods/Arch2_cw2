@@ -1,3 +1,6 @@
+/*  RAVI WOODS - CACHE SIMULATOR - EE2-13 CWORK 2 - 22/01/2016 */
+/*  Header for defining instruction functions */
+
 #ifndef FUNCTIONS_HPP
 #define FUNCTIONS_HPP
 

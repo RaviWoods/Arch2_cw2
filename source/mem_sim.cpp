@@ -1,3 +1,6 @@
+/*  RAVI WOODS - CACHE SIMULATOR - EE2-13 CWORK 2 - 22/01/2016 */
+/*  Main source file, with input and parameter parsing */
+
 #include "mem_sim_libs.hpp"
 #include "mem_sim_classes.hpp"
 #include "mem_sim_functions.hpp"

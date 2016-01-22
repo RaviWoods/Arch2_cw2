@@ -1,4 +1,0 @@
-WRITE
-READ
-fffe
-NOTHING

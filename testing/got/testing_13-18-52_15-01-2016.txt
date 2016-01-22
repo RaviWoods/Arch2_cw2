@@ -1,2 +1,0 @@
-write-ack 0 miss 2
-read-ack 0 hit 2 000000000000000000000000FFFFFFFF

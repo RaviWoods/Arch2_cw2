@@ -1,3 +1,6 @@
+/*  RAVI WOODS - CACHE SIMULATOR - EE2-13 CWORK 2 - 22/01/2016 */
+/*  Source file for defining instruction functions */
+
 #include "mem_sim_libs.hpp"
 #include "mem_sim_functions.hpp"
 #include "mem_sim_classes.hpp"
@@ -17,6 +20,7 @@ string flushCommand (CacheStructure& cacheVect, const Parameters& P) {
 
 	stringstream ss;
 	ss << "flush-ack " << accessTime << endl;
+	
 	return(ss.str());
 }
 string debugCommand (CacheStructure& cacheVect, const Parameters& P) {

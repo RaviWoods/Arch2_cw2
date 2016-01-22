@@ -1,5 +1,0 @@
-NOTHING
-NOTHING
-NOTHING
-WRITE
-accessTime = 3

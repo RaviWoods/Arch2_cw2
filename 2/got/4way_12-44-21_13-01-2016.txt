@@ -1,7 +1,0 @@
-write-ack 1 miss 4
-write-ack 1 hit 1
-write-ack 1 hit 1
-write-ack 1 hit 1
-write-ack 0 miss 4
-write-ack 2 miss 4
-write-ack 3 miss 4
