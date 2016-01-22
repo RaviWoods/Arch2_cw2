@@ -5,6 +5,7 @@
 For this coursework, I used a basic form of Test-Driven development. To do this, I started by producing a set of 3 tests. Each test had 3 text files, for parameters, inputs and the expected outputs. These tests were produced from my understanding of the cache, and aimed to cover most, if not all, edge cases in the specification. Then, I could test and iterate from an empty source file to a finished solution. 
 
 For developing the code, I broke the problem down into 3 more basic problems:
+
 1. Parsing the input and parameters into their respective components.
 2. Defining data structures for simulation of the cache.
 3. Using these data structures to execute instructions on the cache. For this I needed a good understanding of the cache. Flowcharts like [this one](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Write-back_with_write-allocation.svg/640px-Write-back_with_write-allocation.svg.png) were useful.
