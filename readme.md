@@ -22,9 +22,9 @@ These scripts have 3 forms, for different operating systems, as I often changed 
 
 ## Further debugging 
 
-The first debug tool I used, given in the specification, was debug-req. When using this, I printed out each set of the cache, and the block addresses stored inside it. The disadvantage of this system was that it wouldn't print out the data stored within the cache, but this pose a problem for the most part.
+The first debug tool I used, given in the specification, was debug-req. When using this, I printed out each set of the cache, and the block addresses stored inside it. The disadvantage of this system was that it wouldn't print out the data stored within the cache, but this didn't pose a problem for the most part.
 
-In addition to this, I built a preprocessor instruction which would print the name of a variable and its value at any point to standard error, so I could check variables when needed. I could turn this off also, for submission
+In addition to this, I built a preprocessor instruction which would print the name of a variable and its value at any point to standard error, so I could check variables when needed. I could turn this off also, for submission.
 
 ## File structure
 
